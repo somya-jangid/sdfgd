@@ -1,0 +1,362 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #141414;
+    color: #fff;
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Glassmorphism */
+.glassmorphism {
+    background: rgba(24, 24, 24, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+}
+
+/* Buttons */
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none; /* Remove underline from links */
+    display: inline-block; /* For proper spacing */
+}
+
+.btn-red {
+    background-color: #E50914;
+    color: #fff;
+}
+
+.btn-red:hover {
+    background-color: #C00811;
+    transform: scale(1.05);
+}
+
+.btn-gray {
+  background-color: #E5E5E5;
+  color: #141414;
+}
+
+.btn-gray:hover{
+    transform: scale(1.05);
+}
+
+/* Text Styles */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+.text-primary {
+    color: #fff;
+}
+
+.text-secondary {
+    color: #E5E5E5;
+}
+
+/* Landing Page */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Use viewport height for full-screen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden; /* Hide overflowing content */
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure image covers the entire area */
+    z-index: -1;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1; /* Place overlay behind text */
+}
+
+.hero-content {
+    z-index: 1; /* Place content above the overlay */
+    position: relative; /* Ensure content is positioned correctly */
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.hero .sign-in-link {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #E5E5E5;
+    text-decoration: none;
+}
+
+.feature-section {
+    background-color: #181818;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.feature-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.feature-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Footer */
+footer {
+    background-color: #141414;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer a {
+    color: #E5E5E5;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* Login/Signup Page */
+.form-container {
+    width: 90%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="email"] {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #333;
+    color:#fff;
+    border-radius: 5px;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="password"]:focus,
+.form-group input[type="email"]:focus{
+     border: 1px solid #E50914;
+}
+
+
+/* Navigation Bar */
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 100; /* Ensure navbar is on top */
+}
+
+.navbar-left,
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    color: #E5E5E5;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.2s ease-in-out;
+}
+
+.navbar a.active {
+    color: #E50914;
+}
+
+.navbar img.logo {
+    height: 30px;
+    margin-right: 20px;
+}
+
+/* Content Rows */
+.content-row {
+    margin-bottom: 20px;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent wrapping */
+    padding: 10px 0;
+}
+
+.content-row h2 {
+    margin-left: 20px;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.poster {
+    display: inline-block; /* Display posters horizontally */
+    margin-right: 10px;
+    transition: transform 0.2s ease-in-out;
+    position: relative; /* For overlay positioning */
+    cursor: pointer;
+}
+
+.poster img {
+    height: 200px; /* Adjust as needed */
+    border-radius: 5px;
+    display: block; /* Remove extra space below inline-block elements */
+}
+
+.poster:hover {
+    transform: scale(1.1);
+}
+
+.poster-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.poster:hover .poster-overlay {
+    opacity: 1;
+}
+
+.poster-overlay .btn {
+    margin: 5px;
+}
+
+/* Title Details Page */
+.backdrop-image {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    position: relative; /* For overlay */
+}
+
+.backdrop-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.title-details {
+    padding: 20px;
+}
+
+.title-details h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.title-info {
+    margin-bottom: 15px;
+    color: #E5E5E5;
+}
+
+/* Carousel */
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%; /* Each item takes full width */
+  box-sizing: border-box;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 50vh; /* Adjust height as needed */
+  object-fit: cover;
+  display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-right {
+        margin-top: 10px;
+    }
+    .poster img {
+        height: 150px; /* Smaller posters on smaller screens */
+    }
+    .form-container{
+        margin: 20px auto;
+    }
+}
